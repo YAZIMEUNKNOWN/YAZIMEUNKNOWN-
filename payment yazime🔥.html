@@ -1,0 +1,98 @@
+<html lang="id">
+<!-- By @Dhilzzxd "Jangan Dihapus Jika Tidak Mau Error" -->
+ <head> 
+  <meta charset="UTF-8"> 
+  <!-- By @Dhilzzxd "Jangan Dihapus Jika Tidak Mau Error" -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Payment {YAZIME UNKNOWN}</title> 
+  <!-- By @Dhilzzxd "Jangan Dihapus Jika Tidak Mau Error" -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+  <!-- By @Dhilzzxd "Jangan Dihapus Jika Tidak Mau Error" -->
+  <link href="https://fonts.googleapis.com/css2?family=Iceland&amp;display=swap" rel="stylesheet"> 
+  <!-- By @Dhilzzxd "Jangan Dihapus Jika Tidak Mau Error" -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"> 
+    <link rel="stylesheet" href="https://dhilxd.ruztan.my.id/css/by_yt:@dhilzzxd.css"> 
+  <style>
+        body {
+            font-family: 'Iceland', sans-serif;
+            background-image: url("https://files.catbox.moe/rpg2ip.jpg"); // UBAH JADI LOGO LU
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+    </style> 
+ </head> 
+ <body> 
+  <div class="container-center"> 
+   <div class="card"> 
+    <h3 style="font-size: 28px;" class="mb-3">Payment {YAZIME UNKNOWN}</h3> 
+    <!-- By @Dhilzzxd "Jangan Dihapus Jika Tidak Mau Error" -->
+    <div class="payment-box"> 
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVKYWWIPQfCiaSO0raXzYdHn0_c6hCOA8WVbI2dDyzp0NcvIROxu7BaEHhN_erz59LY50&amp;usqp=CAU" class="payment-logo" alt="Dana"> 
+     <!-- Ini adalah komentar di HTML -->
+     <span class="payment-text" id="payment-dana"> 082286199585 </span> 
+     <button class="copy-btn" onclick="copyText('payment-dana')"> <i class="bx bx-copy"></i> 
+     <!-- By @Dhilzzxd "Jangan Dihapus Jika Tidak Mau Error" -->
+     </button> 
+     <!-- By @Dhilzzxd "Jangan Dihapus Jika Tidak Mau Error" -->
+    </div> 
+    <!-- By @Dhilzzxd "Jangan Dihapus Jika Tidak Mau Error" -->
+    
+    <!-- By @Dhilzzxd "Jangan Dihapus Jika Tidak Mau Error" -->
+    <button class="btn btn-primary mt-3" onclick="window.open("https://wa.me/082286199585");">Contact Yazime</button> 
+   </div> 
+   <!-- By @Dhilzzxd "Jangan Dihapus Jika Tidak Mau Error" -->
+  </div> 
+  <!-- Custom Alert --> 
+  <div id="custom-alert" class="custom-alert"> 
+  <!-- By @Dhilzzxd "Jangan Dihapus Jika Tidak Mau Error" -->
+   <i class="bx bx-check-circle"></i> 
+   <span id="alert-message">Nomor berhasil disalin!</span> 
+   <!-- By @Dhilzzxd "Jangan Dihapus Jika Tidak Mau Error" -->
+   <button onclick="closeAlert()">×</button> 
+  </div> 
+<script>
+    function copyText(elementId) {
+        let textElement = document.getElementById(elementId);
+        if (!textElement) {
+            showAlert("Error: Elemen tidak ditemukan!");
+            return;
+        }
+        
+        let text = textElement.innerText || textElement.textContent; // Ambil teks dengan cara aman
+        
+        if (!text.trim()) {
+            showAlert("Tidak ada teks untuk disalin!");
+            return;
+        }
+
+        navigator.clipboard.writeText(text).then(() => {
+            showAlert("Nomor berhasil disalin!");
+        }).catch(err => {
+            showAlert("Gagal menyalin teks!");
+            console.error("Copy failed: ", err);
+        });
+    }
+
+    function showAlert(message) {
+        let alertBox = document.getElementById("custom-alert");
+        if (!alertBox) return;
+        
+        document.getElementById("alert-message").textContent = message;
+        alertBox.classList.add("show");
+
+        setTimeout(() => {
+            alertBox.classList.remove("show");
+        }, 4000);
+    }
+
+    function closeAlert() {
+        let alertBox = document.getElementById("custom-alert");
+        if (alertBox) {
+            alertBox.classList.remove("show");
+        }
+    }
+</script>
+ </body>
+</html>
